@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Pendientes</title>
+    <!-- Conexión a Google Fonts para fuentes elegantes y finas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuente elegante y fina: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Fuente elegante y fina: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Fondo general gris claro y fuente elegante */
+        body {
+            background-color: #F5F5F5; /* gris claro */
+            font-family: 'Montserrat', 'Roboto', sans-serif;
+            font-weight: 300;
+            padding-top: 60px;
+        }
+
+        /* Contenedor principal con sombra y fondo gris */
+        .container{
+            max-width: 560px;
+            margin: auto;
+            background-color: #E0E0E0; /* gris */
+            box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Títulos con fuente elegante y fina */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            color: #B71C1C; /* rojo oscuro */
+        }
+
+        /* Enlaces y párrafos en rojo elegante */
+        a, p {
+            color: #B71C1C; /* rojo oscuro */
+            font-weight: 300;
+        }
+
+        /* Barra superior con degradado de grises y rojo */
+        .barra-superior{
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            background: linear-gradient(90deg, #757575 0%, #B71C1C 100%);
+        }
+
+        /* Enlaces en la barra superior en blanco */
+        .barra-superior a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Envoltorio de cada tarea */
+        .envoltorio-tarea {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #030303;
+            border-top: 1px solid #BDBDBD; /* gris */
+        }
+
+        /* Título de la tarea */
+        .titulo-tarea{
+            display: flex;
+        }
+
+        /* Enlace del título de la tarea */
+        .titulo-tarea a {
+            text-decoration: none;
+            color: #424242; /* gris oscuro */
+            margin-left: 10px;
+            font-weight: 300;
+        }
+
+        /* Icono de tarea completa en rojo */
+        .icono-tarea-completa {
+            height: 20px;
+            width: 20px;
+            background-color: #B71C1C; /* rojo oscuro */
+            border-radius: 50px;
+        }
+
+        /* Icono de tarea incompleta en gris */
+        .icono-tarea-incompleta {
+            height: 20px;
+            width: 20px;
+            background-color: #BDBDBD; /* gris */
+            border-radius: 50px;
+        }
+
+        /* Enlace para eliminar en rojo fuerte */
+        .enlace-eliminar {
+            text-decoration: none;
+            font-weight: 900;
+            color: #D32F2F; /* rojo fuerte */
+            font-size: 22px;
+            line-height: 0;
+        }
+
+        /* Envoltorio para agregar y buscar tareas */
+        #envoltorio-agregar-buscar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        /* Enlace para agregar tarea en rojo */
+        #enlace-agregar{
+            color: #D32F2F; /* rojo fuerte */
+            text-decoration: none;
+            font-size: 42px;
+            text-shadow: 1px 1px #B71C1C;
+        }
+
+        /* Inputs y textarea con borde rojo suave */
+        input[type=text],
+        input[type=password],
+        textarea {
+            border: 1px solid #D32F2F;
+            border-radius: 5px;
+            padding: 10px;
+            width: 90%;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+        }
+
+        /* Etiquetas de formulario */
+        label {
+            padding-top: 10px !important;
+            display: block;
+            font-weight: 300;
+        }
+
+        /* Botón con borde y texto rojo */
+        .boton {
+            border: 1px solid #D32F2F;
+            background-color: #FAFAFA;
+            color: #D32F2F;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+        }
+
+        /* Cuerpo de la tarjeta */
+        .cuerpo-tarjeta {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        <!-- Aquí se insertará el contenido dinámico de la página -->
+        {% endblock content %}
+    </div>
+</body>
+</html>
